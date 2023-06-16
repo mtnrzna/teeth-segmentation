@@ -5,6 +5,14 @@ import matplotlib.pyplot as plt
 from matplotlib.colors import ListedColormap
 
 
+def display_image(image, cmap='gray', title=None):
+    plt.imshow(image, cmap=cmap)
+    plt.axis('off')
+    if title is not None:
+        plt.title(title)
+    plt.show()
+
+
 def display_images(*images, titles=None, cmaps=None):
     '''
     usage:
